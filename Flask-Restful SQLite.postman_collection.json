@@ -1,0 +1,346 @@
+{
+	"id": "a80b4838-d638-242b-fc27-94d5b9c79767",
+	"name": "Flask-Restful SQLite",
+	"description": "",
+	"order": [
+		"8984d518-208e-652f-c535-5aa06056d9f5",
+		"35633f45-ee56-0146-ee33-64d3cb5982c2",
+		"bb013a27-42d0-59db-559a-5e5b8a2fb2ac",
+		"9f724a4f-516f-89b9-15e6-db0d66ddbd75",
+		"40e429f1-9287-d64b-5793-fa652d9f3a2f",
+		"e413f702-b48f-ee0f-8519-21577913ff46",
+		"88f97a50-f98b-6ca2-04ba-d4bf13f2cb74",
+		"4886721d-0bdd-cab5-9d50-0c938f7bdb53",
+		"7b93793c-bcf7-8143-04c2-587742c83eb9",
+		"74fb6614-2fcc-ad7a-52ee-86d1f6a08fd1",
+		"681be2de-a031-4e84-7955-c8cd0ad6935b"
+	],
+	"folders": [],
+	"folders_order": [],
+	"timestamp": 1586643688765,
+	"owner": 0,
+	"public": false,
+	"requests": [
+		{
+			"id": "35633f45-ee56-0146-ee33-64d3cb5982c2",
+			"headers": "Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODY3MDAxNTUsImlhdCI6MTU4NjY5OTg1NSwibmJmIjoxNTg2Njk5ODU1LCJpZGVudGl0eSI6MX0.kvVHQU8EY-z23xEMaGRfoAUQvr9t5hS14IU5X1XblXk\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODY3MDAxNTUsImlhdCI6MTU4NjY5OTg1NSwibmJmIjoxNTg2Njk5ODU1LCJpZGVudGl0eSI6MX0.kvVHQU8EY-z23xEMaGRfoAUQvr9t5hS14IU5X1XblXk",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/item/chair",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1586700051387,
+			"name": "/item/<name>",
+			"description": "This will return one specific item, uniquely identified by its name. No items two items may have the same name.",
+			"collectionId": "a80b4838-d638-242b-fc27-94d5b9c79767",
+			"responses": []
+		},
+		{
+			"id": "40e429f1-9287-d64b-5793-fa652d9f3a2f",
+			"headers": "Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODY3MDAxNTUsImlhdCI6MTU4NjY5OTg1NSwibmJmIjoxNTg2Njk5ODU1LCJpZGVudGl0eSI6MX0.kvVHQU8EY-z23xEMaGRfoAUQvr9t5hS14IU5X1XblXk\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODY3MDAxNTUsImlhdCI6MTU4NjY5OTg1NSwibmJmIjoxNTg2Njk5ODU1LCJpZGVudGl0eSI6MX0.kvVHQU8EY-z23xEMaGRfoAUQvr9t5hS14IU5X1XblXk",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/store/test",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1586700473071,
+			"name": "/store/<name> ",
+			"description": "This will delete a store. ",
+			"collectionId": "a80b4838-d638-242b-fc27-94d5b9c79767",
+			"responses": []
+		},
+		{
+			"id": "4886721d-0bdd-cab5-9d50-0c938f7bdb53",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/auth",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": "var jsonData = JSON.parse(responseBody);\ntests[\"Access token was not empty\"] = jsonData.access_token !== undefined;\n\npostman.setEnvironmentVariable(\"jwt_token\", \"jsonData.access_token\");",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1586699271315,
+			"name": "/auth",
+			"description": "This will create a new item. If the item already exists, it will fail.",
+			"collectionId": "a80b4838-d638-242b-fc27-94d5b9c79767",
+			"responses": [],
+			"rawModeData": "{\n\t\"username\":\"bob\",\n\t\"password\":\"asdf\"\n}"
+		},
+		{
+			"id": "681be2de-a031-4e84-7955-c8cd0ad6935b",
+			"headers": "//Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": false
+				}
+			],
+			"url": "http://localhost:8080/item/chair",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "DELETE",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1586651879819,
+			"name": "/item/<name>",
+			"description": "This will delete an item,uniquely identified by name.",
+			"collectionId": "a80b4838-d638-242b-fc27-94d5b9c79767",
+			"responses": [],
+			"rawModeData": ""
+		},
+		{
+			"id": "74fb6614-2fcc-ad7a-52ee-86d1f6a08fd1",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/item/chair",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "PUT",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1586700097062,
+			"name": "/item/<name>",
+			"description": "This will create a new item or update an existing item.",
+			"collectionId": "a80b4838-d638-242b-fc27-94d5b9c79767",
+			"responses": [],
+			"rawModeData": "{\n\t\"price\":20.99,\n\t\"store_id\":1\n}"
+		},
+		{
+			"id": "7b93793c-bcf7-8143-04c2-587742c83eb9",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/register",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1586651783044,
+			"name": "/register",
+			"description": "This will create a new item. If the item already exists, it will fail.",
+			"collectionId": "a80b4838-d638-242b-fc27-94d5b9c79767",
+			"responses": [],
+			"rawModeData": "{\n\t\"username\":\"bob\",\n\t\"password\":\"asdf\"\n}"
+		},
+		{
+			"id": "88f97a50-f98b-6ca2-04ba-d4bf13f2cb74",
+			"headers": "Content-Type: application/json\n",
+			"headerData": [
+				{
+					"key": "Content-Type",
+					"value": "application/json",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/item/chair",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": [],
+			"dataMode": "raw",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1586700030451,
+			"name": "/item/<name>",
+			"description": "This will create a new item. If the item already exists, it will fail.",
+			"collectionId": "a80b4838-d638-242b-fc27-94d5b9c79767",
+			"responses": [],
+			"rawModeData": "{\n\t\"price\":15.99,\n\t\"store_id\":1\n}"
+		},
+		{
+			"id": "8984d518-208e-652f-c535-5aa06056d9f5",
+			"headers": "",
+			"headerData": [],
+			"url": "http://localhost:8080/items",
+			"queryParams": [],
+			"pathVariables": {},
+			"pathVariableData": [],
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "a80b4838-d638-242b-fc27-94d5b9c79767",
+			"data": null,
+			"dataMode": "params",
+			"name": "/items",
+			"description": "This should return a list of items , each in JSON format.",
+			"descriptionFormat": "html",
+			"time": 1586625825454,
+			"version": 2,
+			"responses": [],
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"isFromCollection": true,
+			"collectionRequestId": "42c74510-6fa1-f8d1-dd3e-8143488a49d7",
+			"collection_id": "a80b4838-d638-242b-fc27-94d5b9c79767"
+		},
+		{
+			"id": "9f724a4f-516f-89b9-15e6-db0d66ddbd75",
+			"headers": "Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODY3MDAxNTUsImlhdCI6MTU4NjY5OTg1NSwibmJmIjoxNTg2Njk5ODU1LCJpZGVudGl0eSI6MX0.kvVHQU8EY-z23xEMaGRfoAUQvr9t5hS14IU5X1XblXk\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODY3MDAxNTUsImlhdCI6MTU4NjY5OTg1NSwibmJmIjoxNTg2Njk5ODU1LCJpZGVudGl0eSI6MX0.kvVHQU8EY-z23xEMaGRfoAUQvr9t5hS14IU5X1XblXk",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/store/test",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "POST",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1586700397096,
+			"name": "/store/<name>",
+			"description": "This will create a store. ",
+			"collectionId": "a80b4838-d638-242b-fc27-94d5b9c79767",
+			"responses": []
+		},
+		{
+			"id": "bb013a27-42d0-59db-559a-5e5b8a2fb2ac",
+			"headers": "Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODY3MDAxNTUsImlhdCI6MTU4NjY5OTg1NSwibmJmIjoxNTg2Njk5ODU1LCJpZGVudGl0eSI6MX0.kvVHQU8EY-z23xEMaGRfoAUQvr9t5hS14IU5X1XblXk\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODY3MDAxNTUsImlhdCI6MTU4NjY5OTg1NSwibmJmIjoxNTg2Njk5ODU1LCJpZGVudGl0eSI6MX0.kvVHQU8EY-z23xEMaGRfoAUQvr9t5hS14IU5X1XblXk",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/store/test",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1586700410959,
+			"name": "/store/<name>",
+			"description": "This will return one specific store, uniquely identified by its name. No items two stores may have the same name.",
+			"collectionId": "a80b4838-d638-242b-fc27-94d5b9c79767",
+			"responses": []
+		},
+		{
+			"id": "e413f702-b48f-ee0f-8519-21577913ff46",
+			"headers": "Authorization: JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODY3MDAxNTUsImlhdCI6MTU4NjY5OTg1NSwibmJmIjoxNTg2Njk5ODU1LCJpZGVudGl0eSI6MX0.kvVHQU8EY-z23xEMaGRfoAUQvr9t5hS14IU5X1XblXk\n",
+			"headerData": [
+				{
+					"key": "Authorization",
+					"value": "JWT eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE1ODY3MDAxNTUsImlhdCI6MTU4NjY5OTg1NSwibmJmIjoxNTg2Njk5ODU1LCJpZGVudGl0eSI6MX0.kvVHQU8EY-z23xEMaGRfoAUQvr9t5hS14IU5X1XblXk",
+					"description": "",
+					"enabled": true
+				}
+			],
+			"url": "http://localhost:8080/stores",
+			"queryParams": [],
+			"preRequestScript": null,
+			"pathVariables": {},
+			"pathVariableData": [],
+			"method": "GET",
+			"data": null,
+			"dataMode": "params",
+			"version": 2,
+			"tests": null,
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1586700618409,
+			"name": "/store",
+			"description": "This will return a list of all the stores in system",
+			"collectionId": "a80b4838-d638-242b-fc27-94d5b9c79767",
+			"responses": []
+		}
+	]
+}
